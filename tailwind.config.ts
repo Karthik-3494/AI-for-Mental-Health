@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -24,6 +25,15 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				calmi: {
+					blue: '#81B5E3',
+					lightBlue: '#C2E1FB',
+					lavender: '#C8BBE9',
+					mint: '#A6DDBD',
+					softPink: '#F4D6E2',
+					cream: '#FFF6E9',
+					gray: '#F0F0F5'
+				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
@@ -84,11 +94,25 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'breathe-in': {
+					'0%': { transform: 'scale(1)' },
+					'100%': { transform: 'scale(1.2)' }
+				},
+				'breathe-out': {
+					'0%': { transform: 'scale(1.2)' },
+					'100%': { transform: 'scale(1)' }
+				},
+				'breathe-hold': {
+					'0%, 100%': { transform: 'scale(1.2)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'breathe-in': 'breathe-in 4s ease-in-out forwards',
+				'breathe-hold': 'breathe-hold 4s ease-in-out forwards',
+				'breathe-out': 'breathe-out 4s ease-in-out forwards'
 			}
 		}
 	},
